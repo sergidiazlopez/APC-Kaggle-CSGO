@@ -22,12 +22,17 @@ L'objectiu és predir quin dels dos sides guanyará la ronda, a partir de les da
 Durant aquesta pràctica hem realitzat diferents experiments.
 ### Preprocessat
 Quines proves hem realitzat que tinguin a veure amb el pre-processat? com han afectat als resultats?
+
+* Codificar dades categòriques
+* Eliminar dades que no tenen sentit en la predicció (data i hora per exemple, ID de jugador de la víctima...)
+* Eliminar atributs amb dades incompletes
+* Buscar correlacions entre l'atribut objectiu i la resta
 ### Model
 /////placeholder)////
 
-| Model | Hiperparametres | Mètrica | Temps |
-| -- | -- | -- | -- |
-| Logistic Regression | x | x | x |
+| Model | Hiperparametres | Precision | Recall | F1 | Temps (train) | Temps(pred.)
+| -- | -- | -- | -- | -- | -- | -- |
+| Logistic Regression | C:0.1 | 81% | 81% | 81% | 65s | 0.0519s
 | SVM | kernel: lineal C:10 | 58% | 200ms |
 | Decission Tree |x|x|x|
 | KNN |x|x|x|
@@ -46,7 +51,7 @@ Primer, clonar el repositori
 
 ``` pip install -r requirements.txt ```
 
-Abans de fer la execució hem de descarregar el dataset de Kaggle i descomprimir els fitxers .csv al directori ``` datasets```
+Abans de fer la execució hem de descarregar el dataset de Kaggle i descomprimir els fitxers .csv al directori ``` dataset```
 
 Per tal de fer una prova, es pot fer servir amb la següent comanda
 
