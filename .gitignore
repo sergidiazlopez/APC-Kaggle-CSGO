@@ -127,3 +127,33 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+dataset/.~lock.esea_master_dmg_demos.part1.csv#
+dataset/.~lock.esea_master_kills_demos.part1.csv#
+dataset/cs_cruise.png
+dataset/de_cache.png
+dataset/de_cbble.png
+dataset/de_coast.png
+dataset/de_dust2.png
+dataset/de_empire.png
+dataset/de_inferno.png
+dataset/de_mikla.png
+dataset/de_mirage.png
+dataset/de_new_nuke.png
+dataset/de_nuke.png
+dataset/de_overpass.png
+dataset/de_royal.png
+dataset/de_santorini.png
+dataset/de_season.png
+dataset/de_train.png
+dataset/de_tulip.png
+dataset/esea_master_dmg_demos.part1.csv
+dataset/esea_master_dmg_demos.part2.csv
+dataset/esea_master_grenades_demos.part1.csv
+dataset/esea_master_grenades_demos.part2.csv
+dataset/esea_master_kills_demos.part1.csv
+dataset/esea_master_kills_demos.part2.csv
+dataset/esea_meta_demos.part1.csv
+dataset/esea_meta_demos.part2.csv
+dataset/map_data.csv
+dataset/mm_grenades_demos.csv
+dataset/mm_master_demos.csv

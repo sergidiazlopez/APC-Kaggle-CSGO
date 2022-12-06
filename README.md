@@ -32,11 +32,10 @@ Quines proves hem realitzat que tinguin a veure amb el pre-processat? com han af
 
 | Model | Hiperparametres | Precision | Recall | F1 | Temps (train) | Temps(pred.)
 | -- | -- | -- | -- | -- | -- | -- |
-| Logistic Regression | C:0.1 | 81% | 81% | 81% | 65s | 0.0519s
-| SVM | kernel: lineal C:10 | 58% | 200ms |
-| Decission Tree |x|x|x|
-| KNN |x|x|x|
-| [Random Forest](link) | 100 Trees, XX | 57% | 100ms |
+| Logistic Regression | 'C': 1, 'fit_intercept': False | 81% | 81% | 81% | 65s | 0.05s
+| Decission Tree | 'max_depth': 7, 'max_leaf_nodes': 100 | 82% | 82% | 82% | 45s | 0.15s
+| Linear SVC | C:10? loss: | 80% | 78% | 78% | 1123s | 0.05s
+| KNN |x| 84%| 84%| 84% | 18 min|x|
 | Random Forest | 1000 Trees, XX | 58% | 1000ms |
 | Multi-layer perceptron |x|x|x|
 
