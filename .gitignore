@@ -157,3 +157,4 @@ dataset/esea_meta_demos.part2.csv
 dataset/map_data.csv
 dataset/mm_grenades_demos.csv
 dataset/mm_master_demos.csv
+.vscode/launch.json
