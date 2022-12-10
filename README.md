@@ -38,7 +38,7 @@ Quines proves hem realitzat que tinguin a veure amb el pre-processat? com han af
 | Linear SVC | 'C': 0.1, 'loss': 'hinge' | 78% | 76% | 76% | 18 min | 0.05s
 | KNN |'n_neighbors': 3, 'p': 1, 'weights': 'distance'| 84%| 84%| 84% | 181s |17s|
 | Random Forest | 'max_depth': 8, 'n_estimators': 100 | 82% | 82% | 82% | 2h 47min | 16s|
-| Multi-layer perceptron |x|x|x|
+| Multi-layer perceptron | 'activation': 'relu', 'hidden_layer_sizes': (10, 20, 10), 'learning_rate': 'constant' | 81% | 81% | 81% | 2h | 0.6s
 
 ## Demo
 Primer, clonar el repositori
