@@ -1,4 +1,7 @@
 import pandas as pd
+import sys
+import time
+
 
 # Funcions per a llegir dades en format csv
 def load_dataset(path):
@@ -12,8 +15,11 @@ def load_split_dataset(path, parts):
 
 def ingest_data():
     meta_data = load_split_dataset('dataset/esea_meta_demos', 2)
+    meta_data = meta_data.drop('winner_team', axis=1)
 
     kills_data = load_split_dataset('dataset/esea_master_kills_demos', 2)
     kills_data = kills_data.drop(columns=['tick','att_team','vic_team'])
+    
+
 
     return pd.merge(kills_data, meta_data)
