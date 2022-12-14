@@ -4,6 +4,7 @@ sys.path.append( 'src/' )
 from ingest_data import *
 from generate_features import *
 from train_model import *
+from predict_new_data import *
 
 from configparser import ConfigParser
 
@@ -72,3 +73,23 @@ for i, model in enumerate(models):
 # Use model to predict more data
 model_selected = conf.get('prediction', 'modelToUse')
 print("Model to use: " + model_selected)
+
+# If we skipped the training section we load directly from the file
+if conf.get('train', 'skip') == "False":
+    file_path = join('models', 'CSGO-model-' + model_selected + '.sav')
+    if exists(file_path) and load_param == "True":
+        print ("Found trained model in file" + file_path + " Loading instead of training. You can change this behaviour in config.conf")
+        model = load(file_path)
+        type(model)
+    else:
+        print("Please enable training or loading models in config.conf")
+else:
+    for name, m in zip(models, trained_models):
+        print(name)
+        if(name == model_selected):
+            model = m
+
+if model:
+    predict(model)
+#else:
+    #print("Please enable training or loading models in config.conf")

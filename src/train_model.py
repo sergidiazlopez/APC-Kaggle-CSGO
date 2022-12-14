@@ -84,3 +84,5 @@ def train_model(X_train, X_test, y_train, y_test, model, searchHyperparameters):
 
     print(classification_report(y_test, y_pred))
 
+    return clf
+

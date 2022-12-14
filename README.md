@@ -56,6 +56,8 @@ Abans de fer la execució hem de descarregar el dataset de Kaggle i descomprimir
 Per tal de fer una prova, es pot fer servir amb la següent comanda
 
 ``` python3 demo/demo.py --input here ```
+
+Nota: per defecte la demo no entrena els models, els carrega des dels arxius que es troben en la carpeta models. Per a ajustar això s'ha de canviar la opció corresponent a config.conf
 ## Conclusions
 El millor model que s'ha aconseguit ha estat...
 En comparació amb l'estat de l'art i els altres treballs que hem analitzat....

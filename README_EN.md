@@ -38,6 +38,8 @@ To run the demo, simply run the following command
 
 ``` python3 demo/demo.py --input here ```
 
+Note: by default the demo does not train the models, they are loaded from files located in the models folder. You can control this behaviour in config.conf
+
 ## Idees per treballar en un futur
 
 Since this is a video game, where we have all the data in memory and do not need sensors or equipment like in the real world, this repository could be used as a foundation for developing a program that captures the state of a competitive Counter Strike match and predicts the result of the round at all times.
