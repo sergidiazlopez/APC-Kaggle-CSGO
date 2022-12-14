@@ -19,9 +19,9 @@ Tenim dades de totes les rondes de 377.629 partides de ESEA. Els dos arxius de d
 ### Objectius del dataset
 L'objectiu és predir quin dels dos sides guanyará la ronda, a partir de les dades de la partida.
 ## Experiments
-Durant aquesta pràctica hem realitzat diferents experiments.
+Durant aquesta pràctica he realitzat els seguents experiments.
 ### Preprocessat
-Quines proves hem realitzat que tinguin a veure amb el pre-processat? com han afectat als resultats?
+Al notebook trobareu informació més detallada del proces de desenvolupament. Un resum del procediment de preprocessat de les dades és el següent:
 
 * Codificar dades categòriques
 * Eliminar dades que no tenen sentit en la predicció (data i hora per exemple, ID de jugador de la víctima...)
@@ -29,7 +29,7 @@ Quines proves hem realitzat que tinguin a veure amb el pre-processat? com han af
 * Buscar correlacions entre l'atribut objectiu i la resta
 * S'ha intentat normalitzar les dades però s'ha descartat ja que no te cap canvi en el resultat dels models
 ### Model
-
+S'han implementat els seguents models per a fer una predicció. Més informació al notebook, a la demo i en els següents apartats.
 
 | Model | Hiperparametres | Precision | Recall | F1 | Temps (train) | Temps(pred.)
 | -- | -- | -- | -- | -- | -- | -- |
@@ -58,10 +58,18 @@ Per tal de fer una prova, es pot fer servir amb la següent comanda
 ``` python3 demo/demo.py --input here ```
 
 Nota: per defecte la demo no entrena els models, els carrega des dels arxius que es troben en la carpeta models. Per a ajustar això s'ha de canviar la opció corresponent a config.conf
+
 ## Conclusions
-El millor model que s'ha aconseguit ha estat...
-En comparació amb l'estat de l'art i els altres treballs que hem analitzat....
+Mirant els resultats de l'entrenament i anàlisi dels diferents models que hem implementat obtenim uns incisos:
+* Els models més complexos com Random Forest o Multi-layer perceptron ofereixen un rendiment similar als models simples però te un temps d'entrenament molt més llarg.
+* El model Linear SVC te un rendiment inferior a la resta.
+* El model KNN és el que te millor rendiment (Precision, Recall i F1) però és el que te major cost de temps per a fer la predicció.
+* Els models més simples (Log. Reg i Decission Tree) tenen un cost de train i prediction molt reduït i un rendiment molt bo que és similar a el dels models més costosos.
+
+Si utilitzem el model per a predir partides en temps real, considero que és més potent utilitzar un arbre de decisió. Te un rendiment bastant bo, del 82% i ofereix un temps de predicció baix, optim per a predir els resultats mentre s'está jugant sense afectar la CPU i disminuir el rendiment del videojoc. El temps de entrenament també és de menys d'un minut, fent que sigui més factible realimentar el model amb dades noves per a millorar-lo.
+
+S'ha pogut comprovar com els models més complexos no sempre son la millor opció. En aquestes circumstàncies, en les que no ens podem permetre un un de CPU o GPU elevat, es valora la lleugeresa de la predicció.
 ## Idees per treballar en un futur
 Com es tracta d'un videojoc, on tenim totes les dades en memoria i no necessitem sensors ni equipament com al mon real, aquest repositori es podria usar com a fonaments per a desenvolupar un programa que capti el estat d'una partida competitiva de Counter Strike i que vagi predint en tot moment quin sera el resultat de la ronda.
 ## Llicencia
-El projecte s’ha desenvolupat sota llicència ZZZz.
+El projecte s’ha desenvolupat sota [llicència GPLv3](LICENSE.txt).
